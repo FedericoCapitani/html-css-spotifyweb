@@ -57,6 +57,7 @@ body{
 }
 .recent, .user_rec, .artists{
     background-color: red;
+    height: 300px;
     width: 100%;
     margin-top: 40px;
 }
