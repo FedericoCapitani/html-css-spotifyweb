@@ -18,7 +18,7 @@ a{
 }
 .row{
     width: calc(100% - 40px);
-    margin: 0 20px;
+    margin: 20px 20px;
     display: flex;
     column-gap: 10px;
 }
@@ -46,6 +46,7 @@ a{
     background-color: black;
     width: 250px;
     float: left;
+    position: relative;
 }
 .logo{
     height: 100px;
@@ -96,6 +97,38 @@ a{
 .list_collection p{
     margin-top: 20px;
 }
+.utente{
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 0 30px;
+}
+.download{
+    width: 100%;
+    color: var(--greytext);
+    font-size: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--greytext);
+}
+.download > span{
+    margin-left: 10px;
+}
+.account{
+    color: white;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.account > img{
+    height: 30px;
+    width: 30px;
+    background-color: #7d7f84;
+    border-radius: 50%;
+}
+.account > span{
+    margin-left: 10px;
+}
 /* content */
 #content{
     float: left;
@@ -140,22 +173,30 @@ a{
 }
 .recent h2, .user_rec h2, .artists h2{
     color: white;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 .card img{
     width: 100%;
-    margin: 10px;
+    height: auto;
 }
-.card p{
+.white{
     color: white;
     width: 100%;
     text-align: center;
     font-size: 18px;
-    margin: 5px 0;
+    margin: 20px 0 0;
 }
-.card p:last-child{
+.card p:nth-child(3){
+    color: var(--greytext);
+    margin: 20px 0;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+}
+.user_rec > p, .artists > p{
     color: var(--greytext);
     font-size: 14px;
+    margin: 20px 0 0 20px;
 }
 /* footer */
 #site_footer{
