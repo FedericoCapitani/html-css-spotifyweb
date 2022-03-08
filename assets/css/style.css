@@ -89,6 +89,10 @@ a{
 .create > span{
     align-self: center;
 }
+.create i:hover, .create span:hover, .list_collection p:hover,
+.home:hover, .search:hover, .library:hover, .download:hover{
+    color: white;
+}
 .list_collection{
     height: calc(100% - 100px);
     color: var(--greytext);
@@ -145,6 +149,7 @@ a{
     color: white;
     padding: 10px 30px;
     border: 2px solid white;
+    font-size: 1rem;
     font-weight: bolder;
     border-radius: 50px;
     float: right;
@@ -153,6 +158,10 @@ a{
 }
 .btn > a{
     color: white;
+}
+.btn:hover{
+    color: white;
+    padding: 15px 40px;
 }
 .brani{
     overflow-y: auto;
@@ -167,6 +176,9 @@ a{
 .navbar p{
     color: var(--greytext);
 }
+.navbar p:hover{
+    color: white;
+}
 .recent, .user_rec, .artists{
     width: 100%;
     margin-top: 40px;
@@ -177,7 +189,7 @@ a{
 }
 .card img{
     width: 100%;
-    height: auto;
+    height: 70%;
 }
 .white{
     color: white;
@@ -188,7 +200,7 @@ a{
 }
 .card p:nth-child(3){
     color: var(--greytext);
-    margin: 20px 0;
+    margin: 10px 0;
     width: 100%;
     font-size: 14px;
     text-align: center;
@@ -197,6 +209,10 @@ a{
     color: var(--greytext);
     font-size: 14px;
     margin: 20px 0 0 20px;
+}
+#content img:hover{
+    filter: brightness(0.5);
+    
 }
 /* footer */
 #site_footer{
@@ -320,4 +336,14 @@ a{
 }
 .volume:hover > .green_volume{
     visibility: visible;
+}
+.track_text>p:hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+.track i:hover{
+    color: white;
+}
+.icons i:nth-child(3):hover{
+    font-size: 35px;
 }
