@@ -14,6 +14,18 @@ a{
     --upgrade:#080b12;
     --footer: #282828;
     --greytext: #7d7f84;
+    --green: #adff2f;
+}
+.row{
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    display: flex;
+    column-gap: 10px;
+}
+.card{
+    display: flex;
+    width: calc(100% / 6);
+    flex-wrap: wrap;
 }
 .clearfix::after{
     content: "";
@@ -28,12 +40,63 @@ a{
     width: 100%;
     height: 100%;
 }
+/* sidebar */
 #sidebar{
     height: calc(100vh - 100px);
     background-color: black;
     width: 250px;
     float: left;
 }
+.logo{
+    height: 100px;
+}
+.logo > img{
+    width: 170px;
+    margin: 20px 10px 60px;
+}
+.home > i, .home > span{
+    color: white;
+}
+.home, .search, .library{
+    color: var(--greytext);
+    padding-top: 10px;
+}
+.side_menu i{
+    font-size: 30px;
+    padding-left: 30px;
+    padding-right: 10px;
+}
+.home > i{
+    padding-left: 28px;
+}
+.home_border{
+    border-left: 2px solid var(--green);
+}
+.playlist h3{
+    color: white;
+    margin: 20px 30px 10px;
+}
+.create{
+    color: var(--greytext);
+    margin-left: 30px;
+    display: flex;
+}
+.create > i{
+    font-size: 40px;
+    margin-right: 10px;
+}
+.create > span{
+    align-self: center;
+}
+.list_collection{
+    height: calc(100% - 100px);
+    color: var(--greytext);
+    margin-left: 30px;
+}
+.list_collection p{
+    margin-top: 20px;
+}
+/* content */
 #content{
     float: left;
     width: calc(100% - 250px);
@@ -53,6 +116,7 @@ a{
     border-radius: 50px;
     float: right;
     margin: 20px 5px;
+    
 }
 .btn > a{
     color: white;
@@ -71,10 +135,27 @@ a{
     color: var(--greytext);
 }
 .recent, .user_rec, .artists{
-    background-color: red;
-    height: 400px;
     width: 100%;
     margin-top: 40px;
+}
+.recent h2, .user_rec h2, .artists h2{
+    color: white;
+    margin-left: 30px;
+}
+.card img{
+    width: 100%;
+    margin: 10px;
+}
+.card p{
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    margin: 5px 0;
+}
+.card p:last-child{
+    color: var(--greytext);
+    font-size: 14px;
 }
 /* footer */
 #site_footer{
@@ -151,7 +232,7 @@ a{
 .green{
     width: 30%;
     position: absolute;
-    border: 2px solid yellowgreen;
+    border: 2px solid var(--green);
     border-radius: 2px;
     top: -2px;
     left: -12px;
@@ -188,7 +269,7 @@ a{
     left: -2px;
 }
 .green_volume{
-    border: 2px solid yellowgreen;
+    border: 2px solid var(--green);
     border-radius: 2px;
     position: absolute;
     width: 30%;
