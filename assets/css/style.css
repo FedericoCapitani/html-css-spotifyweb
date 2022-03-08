@@ -15,7 +15,7 @@ a{
     --footer: #282828;
     --greytext: #7d7f84;
 }
-.clearfix{
+.clearfix::after{
     content: "";
     display: table;
     clear: both;
@@ -31,12 +31,12 @@ a{
 #sidebar{
     height: calc(100vh - 100px);
     background-color: black;
-    width: 15%;
+    width: 250px;
     float: left;
 }
 #content{
     float: left;
-    width: 85%;
+    width: calc(100% - 250px);
     height: calc(100vh - 100px);
     background-color: var(--background);
 }
@@ -58,7 +58,7 @@ a{
     color: white;
 }
 .brani{
-    overflow-y: scroll;
+    overflow-y: auto;
     height: calc(100% - 100px);
 }
 .navbar{
@@ -110,6 +110,7 @@ a{
     width: 40%;
     flex-direction: column;
     row-gap: 20px;
+    align-items: center;
 }
 .icons i{
     font-size: 20px;
@@ -119,6 +120,82 @@ a{
 .icons i:nth-child(3){
     font-size: 30px;
 }
-.time_bar span:first-child, .time_bar span:last-child{
+.time_bar{
+    display: flex;
+    width: 100%;
+}
+.time_bar div{
+    display: inline;
+}
+.time_bar div:first-child, .time_bar div:last-child{
     color: white;
+    margin: 0 10px;
+}
+.time{
+    width: 90%;
+    border: 2px solid grey;
+    border-radius: 2px;
+    height: 0px;
+    align-self: center;
+    position: relative;
+}
+.active{
+    width: 30%;
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 2px;
+    top: -2px;
+    left: -12px;
+    height: 0px;
+}
+.green{
+    width: 30%;
+    position: absolute;
+    border: 2px solid yellowgreen;
+    border-radius: 2px;
+    top: -2px;
+    left: -12px;
+    height: 0px;
+    visibility: hidden;
+}
+.time:hover > .green{
+    visibility: visible;
+}
+.settings{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: flex-end;
+}
+.settings i{
+    font-size: 20px;
+    color: white;
+    margin-left: 20px;
+}
+.volume{
+    border: 2px solid grey;
+    border-radius: 2px;
+    width: 50%;
+    margin: 0 20px;
+    position: relative;
+}
+.active_volume{
+    border: 2px solid white;
+    border-radius: 2px;
+    position: absolute;
+    width: 30%;
+    top: -2px;
+    left: -2px;
+}
+.green_volume{
+    border: 2px solid yellowgreen;
+    border-radius: 2px;
+    position: absolute;
+    width: 30%;
+    top: -2px;
+    left: -2px;
+    visibility: hidden;
+}
+.volume:hover > .green_volume{
+    visibility: visible;
 }
