@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 body{
     height: 100vh;
@@ -55,6 +56,10 @@ a{
 .logo > img{
     width: 170px;
     margin: 20px 10px 60px;
+}
+.logo img:last-child{
+    position: absolute;
+    visibility: hidden;
 }
 .home > i, .home > span{
     color: white;
@@ -369,7 +374,7 @@ a{
         width: calc(100% - 40px);
         margin: 20px 20px;
         display: flex;
-        /* column-gap: 10px; */
+        column-gap: 10px;
         flex-wrap: wrap;
     }
     .card{
@@ -382,13 +387,104 @@ a{
         width: 100%;
         height: 60%;
     }
+}
+/* s */
+@media screen and (max-width:768px){
+
+    .navbar{
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+    .navbar p{
+        font-size: 14px;
+        width: calc(100% / 4);
+    }
+    .row{
+        width: calc(100% - 40px);
+        margin: 20px 20px;
+        display: flex;
+        column-gap: 10px;
+        flex-wrap: wrap;
+    }
+    .card{
+        display: flex;
+        width: calc(100% / 3);
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+    .icons i{
+        font-size: 20px;
+        color: white;
+        margin: 10px 10px 0;
+    }
+    .player{
+        row-gap: 10px;
+    }
     .track i{
         display: block;
         margin: 10px 0;
         width: 100%;
     }
 }
-/* s */
-@media screen and (max-width:768px){
-    
+@media screen and (max-width:600px){
+    body{
+        min-width: 320px;
+    }
+    #sidebar{
+        height: calc(100vh - 100px);
+        background-color: black;
+        width: 50px;
+        float: left;
+        position: relative;
+        overflow: hidden;
+    }
+    #content{
+        float: left;
+        width: calc(100% - 50px);
+        height: calc(100vh - 100px);
+        background-color: var(--background);
+    }
+    .logo img:first-child{
+        visibility: hidden;
+    }
+    .logo img:last-child{
+        visibility: visible;
+        top: 0;
+        left: -5px;
+        width: 40px;
+    }
+    .side_menu span, .search span, .library span, .track i, .volume,
+    .active_volume, .green_volume, .playlist h3, .create span, .list_collection,
+    .utente span, .account span{
+        visibility: hidden;
+    }
+    .side_menu i{
+        font-size: 24px;
+    }
+    .home i{
+        padding-left: 10px;
+    } 
+    .search i, .library i{
+        padding-left: 12px;
+    }
+    .playlist h3{
+        height: 0px;
+    }
+    .create{
+        margin-left: 10px;
+    }
+    .utente{
+        padding-left: 10px;
+    }
+    .download{
+        border-bottom: none;
+        padding: 0;
+    }
+    .download i{
+        font-size: 15px;
+        padding-left: 5px;
+    }
+    .download span{
+        position: absolute;
+    }
 }
