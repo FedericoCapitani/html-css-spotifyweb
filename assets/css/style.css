@@ -81,6 +81,7 @@ a{
 .home_border{
     border-left: 2px solid var(--green);
 }
+/* sezione playlist */
 .playlist{
     height: 400px;
 }
@@ -113,6 +114,7 @@ a{
 .list_collection p{
     margin-top: 10px;
 }
+/* sezione utente */
 .utente{
     height: 100px;
     width: 100%;
@@ -200,6 +202,7 @@ a{
 .navbar p:hover{
     color: white;
 }
+/* sezione recenti */
 .cover i{
     position: absolute;
     font-size: 50px;
@@ -235,6 +238,7 @@ a{
     font-size: 14px;
     text-align: center;
 }
+/* sezione consigliati e artisti */
 .user_rec > p, .artists > p{
     color: var(--greytext);
     font-size: 14px;
@@ -256,6 +260,7 @@ a{
     background-color: var(--footer);
     justify-content: space-between;
 }
+/* brano selezionato */
 .track{
     display: flex;
     width: 30%;
@@ -278,6 +283,7 @@ a{
     color: var(--greytext);
     margin-right: 50px;
 }
+/* sezione player */
 .player{
     display: flex;
     width: 40%;
@@ -334,6 +340,7 @@ a{
 .time:hover > .green{
     visibility: visible;
 }
+/* sezione impostazioni */
 .settings{
     display: flex;
     width: 30%;
