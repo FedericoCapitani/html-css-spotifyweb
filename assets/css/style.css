@@ -82,7 +82,7 @@ a{
     border-left: 2px solid var(--green);
 }
 .playlist{
-    height: 250px;
+    height: 400px;
 }
 .playlist h3{
     color: white;
@@ -410,6 +410,13 @@ a{
         width: 24%;
         flex-wrap: wrap;
         margin-bottom: 30px;
+    }
+    .playlist{
+        height: 250px;
+    }
+    .list_collection{
+        height: calc(100% -100px);
+        overflow-y: auto;
     }
     .cover img{
         width: 100%;
